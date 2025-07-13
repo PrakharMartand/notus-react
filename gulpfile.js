@@ -14,11 +14,7 @@ gulp.task("licenses", async function () {
   gulp
     .src("build/index.html", { base: "./" })
     .pipe(
-      gap.prependText(`/*!
-* Notus React - v1.1.0
-* Copyright 2021 Creative Tim
-* Licensed under MIT (https://github.com/creativetimofficial/notus-react/blob/main/LICENSE.md)
-*/\n`)
+      gap.prependText(`\n`)
     )
     .pipe(gulp.dest("./", { overwrite: true }));
 
@@ -26,11 +22,7 @@ gulp.task("licenses", async function () {
   gulp
     .src("build/static/css/*chunk.css", { base: "./" })
     .pipe(
-      gap.prependText(`/*!
-* Notus React - v1.1.0
-* Copyright 2021 Creative Tim
-* Licensed under MIT (https://github.com/creativetimofficial/notus-react/blob/main/LICENSE.md)
-*/\n`)
+      gap.prependText(`\n`)
     )
     .pipe(gulp.dest("./", { overwrite: true }));
   return;
