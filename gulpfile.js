@@ -6,11 +6,7 @@ gulp.task("licenses", async function () {
   gulp
     .src("build/static/js/*chunk.js", { base: "./" })
     .pipe(
-      gap.prependText(`/*!
-* Notus React - v1.1.0
-* Copyright 2021 Creative Tim
-* Licensed under MIT (https://github.com/creativetimofficial/notus-react/blob/main/LICENSE.md)
-*/\n`)
+      gap.prependText(`test`)
     )
     .pipe(gulp.dest("./", { overwrite: true }));
 
