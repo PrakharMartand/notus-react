@@ -1,7 +1,10 @@
 import React from "react";
 
 import Navbar from "components/Navbars/AuthNavbar.js";
-import Footer from "components/Footers/Footer.js";
+// import Footer from "components/Footers/Footer.js";
+import FooterSmall from "components/Footers/FooterSmall";
+import backgroundImage from "../assets/img/Bg2.jpg";
+import profilePic from "../assets/img/gaurav.png";
 
 export default function Profile() {
   return (
@@ -13,7 +16,7 @@ export default function Profile() {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')",
+                `url(${backgroundImage})`,
             }}
           >
             <span
@@ -50,7 +53,7 @@ export default function Profile() {
                     <div className="relative">
                       <img
                         alt="..."
-                        src={require("assets/img/team-2-800x800.jpg").default}
+                        src={profilePic}
                         className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
                       />
                     </div>
@@ -96,30 +99,30 @@ export default function Profile() {
                 </div>
                 <div className="text-center mt-12">
                   <h3 className="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
-                    Jenna Stones
+                    Gaurav Bhaiya
                   </h3>
                   <div className="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
                     <i className="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>{" "}
-                    Los Angeles, California
+                    Mumbai, India
                   </div>
                   <div className="mb-2 text-blueGray-600 mt-10">
                     <i className="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i>
-                    Solution Manager - Creative Tim Officer
+                    CEO & Founder
                   </div>
                   <div className="mb-2 text-blueGray-600">
                     <i className="fas fa-university mr-2 text-lg text-blueGray-400"></i>
-                    University of Computer Science
+                    University of Mumbai
                   </div>
                 </div>
                 <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-9/12 px-4">
                       <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
-                        An artist of considerable range, Jenna the name taken by
-                        Melbourne-raised, Brooklyn-based Nick Murphy writes,
+                        An artist of considerable range, Gaurav the name taken by
+                        Mumbai-raised, Mumbai-based Gaurav Bhaiya writes,
                         performs and records all of his own music, giving it a
                         warm, intimate feel with a solid groove structure. An
-                        artist of considerable range.
+                        artist of considerable range. 
                       </p>
                       <a
                         href="#pablo"
@@ -136,7 +139,7 @@ export default function Profile() {
           </div>
         </section>
       </main>
-      <Footer />
+      <FooterSmall />
     </>
   );
 }
